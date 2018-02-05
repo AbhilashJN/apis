@@ -6,8 +6,12 @@ function getRatings(id, callback) {
   request(
     secondApiUrl + stringId,
     (error, resp, body) => {
-      const rating = JSON.parse(body).rating;
-      callback(rating);
+      if (id < 13) {
+        const rating = JSON.parse(body).rating;
+        callback(rating);
+      } else {
+        callback(null);
+      }
     },
   );
 }
