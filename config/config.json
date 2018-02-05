@@ -1,0 +1,23 @@
+{
+  "development": {
+    "username": "eval",
+    "password": "eval",
+    "database": "eval_dev",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  },
+  "test": {
+    "username": "eval",
+    "password": "eval",
+    "database": "eval",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  },
+  "production": {
+    "username": "eval",
+    "password": "eval",
+    "database": "eval_prod",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  }
+}
