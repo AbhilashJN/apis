@@ -1,14 +1,12 @@
-const getRatings = require('./getRatings');
 
 function parseResponse(jsonData) {
-  const booksArray = jsonData.books;
+  const booksArray = jsonData;
   const booksObj = {};
   let author = '';
   const rating = 0;
   for (let i = 0; i < booksArray.length; i++) {
     // console.log(booksArray[i]);
     author = booksArray[i].Author;
-    console.log(author);
     booksArray[i].rating = Number(rating);
     if (author in booksObj) {
       booksObj[author].push(booksArray[i]);
@@ -17,7 +15,6 @@ function parseResponse(jsonData) {
       booksObj[author].push(booksArray[i]);
     }
   }
-  console.log(booksObj);
   return booksObj;
 }
 
